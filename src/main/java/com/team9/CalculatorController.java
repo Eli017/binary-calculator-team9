@@ -21,4 +21,16 @@ public class CalculatorController {
         }
     }
 
+    public int squareRoot(int number){
+        if (number < 0){
+            return 0; //can't square root negative numbers
+        } else {
+            return (int) Math.sqrt(number);
+        }
+    }
+
+    public int square(int number){
+        return (int) Math.pow(number, 2);
+    }
+
 }

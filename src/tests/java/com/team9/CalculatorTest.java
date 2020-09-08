@@ -32,4 +32,19 @@ public class CalculatorTest {
     public void testZeroDivision() {
         assertEquals(0, calculator.divide(13, 0));
     }
+
+    @Test
+    public void testSquare() {
+        assertEquals(144, calculator.square(12));
+    }
+
+    @Test
+    public void testSquareRoot() {
+        assertEquals(9, calculator.squareRoot(81));
+    }
+
+    @Test
+    public void testSquareRootNegative() {
+        assertEquals(0, calculator.squareRoot(-1));
+    }
 }
