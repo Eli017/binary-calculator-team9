@@ -9,7 +9,42 @@ public class CalculatorTest {
     private final CalculatorController calculator = new CalculatorController();
 
     @Test
-    void basicTest() {
+    void testAddition() {
         assertEquals(2, calculator.add(1, 1));
+    }
+
+    @Test
+    public void testSubtraction() {
+        assertEquals(5, calculator.subtract(10, 5));
+    }
+
+    @Test
+    public void testMultiplication() {
+        assertEquals(21, calculator.multiply(7, 3));
+    }
+
+    @Test
+    public void testDivision() {
+        assertEquals(6, calculator.divide(42, 7));
+    }
+
+    @Test
+    public void testZeroDivision() {
+        assertEquals(0, calculator.divide(13, 0));
+    }
+
+    @Test
+    public void testSquare() {
+        assertEquals(144, calculator.square(12));
+    }
+
+    @Test
+    public void testSquareRoot() {
+        assertEquals(9, calculator.squareRoot(81));
+    }
+
+    @Test
+    public void testSquareRootNegative() {
+        assertEquals(0, calculator.squareRoot(-1));
     }
 }
