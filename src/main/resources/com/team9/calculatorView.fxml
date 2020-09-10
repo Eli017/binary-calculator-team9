@@ -8,7 +8,7 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-    <TextField fx:id="numberField" prefHeight="36.0" prefWidth="152.0" />
+    <TextField fx:id="numberField" prefHeight="36.0" prefWidth="152.0" editable="false" text="0" alignment="CENTER_RIGHT" />
     <Label fx:id="calculatedAnswer" text="Answer Here" />
     <Button fx:id="ToggleButton" mnemonicParsing="false" onMouseClicked="#toggleBinaryArabic" text="Binary" />
      <Button mnemonicParsing="false" onAction="#toArabic" text="Convert to Arabic" />
