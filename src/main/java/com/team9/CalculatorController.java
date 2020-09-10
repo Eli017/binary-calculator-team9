@@ -1,36 +1,66 @@
 package com.team9;
 
+import javafx.fxml.FXML;
+
 public class CalculatorController {
 
-    public int add(int number, int secondNumber) {
-        return number + secondNumber;
-    }
-    public int subtract(int number, int secondNumber) {
-        return number - secondNumber;
+    @FXML
+    private void toggleBinaryArabic() {
+        //TODO: implement toggling of result.
     }
 
-    public int multiply(int number, int secondNumber) {
-        return number * secondNumber;
+    @FXML
+    private void toArabic() {
+        //TODO: implement Calculator interface to convert string input to logical number.
     }
 
-    public int divide(int number, int secondNumber) {
-        if (secondNumber == 0) {
-            return 0; //can't divide by zero
-        } else {
-            return number / secondNumber;
-        }
+    @FXML
+    private void enterZero() {
+        //TODO: append string with 0.
     }
 
-    public int squareRoot(int number){
-        if (number < 0){
-            return 0; //can't square root negative numbers
-        } else {
-            return (int) Math.sqrt(number);
-        }
+    @FXML
+    private void enterOne() {
+        //TODO: append string with 1.
     }
 
-    public int square(int number){
-        return (int) Math.pow(number, 2);
+    @FXML
+    private void addClicked() {
+        //TODO: store first number and work logic around next number.
     }
 
+    @FXML
+    private void subtractClicked() {
+        //TODO: store first number and work logic around next number.
+    }
+
+    @FXML
+    private void multiplyClicked() {
+        //TODO: store first number and work logic around next number.
+    }
+
+    @FXML
+    private void divideClicked() {
+        //TODO: store first number and work logic around next number.
+    }
+
+    @FXML
+    private void squareClicked() {
+        //TODO: store first number and work logic around next number.
+    }
+
+    @FXML
+    private void equalClicked() {
+        //TODO: Perform math to add two binary numbers and populate the result area.
+    }
+
+    @FXML
+    private void sqrtClicked() {
+        //TODO: Perform sqrt math for current number and populate result area.
+    }
+
+    @FXML
+    private void clearClicked() {
+        //TODO: Clear variables and TextField area input.
+    }
 }
