@@ -10,6 +10,7 @@ public class calculatorController{
     @FXML
     TextField numberField;
     public Boolean isButtonPressed = false;
+    private Object String;
 
     @FXML
     private void toggleBinaryArabic() {
@@ -116,5 +117,20 @@ public class calculatorController{
     private void equalClicked() {
         //TODO: Perform math to add two binary numbers and populate the result area.
         numberField.getText();
+        //break string into 3 parts
+        String[] split = numberField.getText().split("\\s+");
+        //get each number and symbol
+        int number1 = String[0];
+        String symbol = String[1];
+        int number2 = String[2];
+
+        //add more if statements for each symbol
+        if (symbol == "+"){
+            answer = number1 + number2;
+        } if else (symbol == "-"){
+            answer = number1 - number2;
+        }
+        //return result
+        //clear variables
     }
 }
