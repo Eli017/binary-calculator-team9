@@ -2,11 +2,9 @@ package com.team9;
 
 public interface CalculatorInterface {
 
-    static String add(String number, String secondNumber) {
-        int numberParsed = ConverterInterface.binaryToDecimal(number);
-        int secondNumberParsed = ConverterInterface.binaryToDecimal(secondNumber);
-        int result = numberParsed + secondNumberParsed;
-        return Integer.toString(result);
+    static int add(int number, int secondNumber) {
+        int result = number + secondNumber;
+        return result;
     }
 
     //TODO convert subtract to input and output the same type as add function.
@@ -47,22 +45,24 @@ public interface CalculatorInterface {
         return (int) Math.pow(number, 2);
     }
 
-    static String eval(String[] input) {
+    static int eval(String[] input) {
         String leftNumberString = input[0];
         String rightNumberString = input[2];
-        String result = "";
+        int leftNumber = ConverterInterface.binaryToDecimal(leftNumberString);
+        int rightNumber = ConverterInterface.binaryToDecimal(rightNumberString);
+        int result = 0;
         switch (input[1]){
             case("+"):
-                result = add(leftNumberString, rightNumberString);
+                result = add(leftNumber, rightNumber);
                 break;
             case("-"):
-//                result = subtract(leftNumberString, rightNumberString);
+                result = subtract(leftNumber, rightNumber);
                 break;
             case("*"):
-//                result = multiply(leftNumberString, rightNumberString);
+                result = multiply(leftNumber, rightNumber);
                 break;
             case("/"):
-//                result = divide(leftNumberString, rightNumberString);
+                result = divide(leftNumber, rightNumber);
                 break;
         }
         return result;

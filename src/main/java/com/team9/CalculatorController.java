@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class calculatorController{
+public class CalculatorController {
     Boolean isButtonPressed = false;
 
     @FXML
@@ -108,7 +108,7 @@ public class calculatorController{
     private void equalClicked() {
         try{
             String[] input = ConverterInterface.parseInput(numberField.getText());
-            calculatedAnswer.setText(CalculatorInterface.eval(input));
+            calculatedAnswer.setText(Integer.toString(CalculatorInterface.eval(input)));
         } catch (Exception e) {
             System.out.println("Make sure your equation is logically sound.");
             e.printStackTrace();
