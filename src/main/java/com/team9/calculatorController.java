@@ -1,16 +1,17 @@
 package com.team9;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-import java.math.MathContext;
-
-
 public class calculatorController{
+    Boolean isButtonPressed = false;
+
     @FXML
     TextField numberField;
-    public Boolean isButtonPressed = false;
-    private Object String;
+
+    @FXML
+    Label calculatedAnswer;
 
     @FXML
     private void toggleBinaryArabic() {
@@ -44,24 +45,14 @@ public class calculatorController{
 
     @FXML
     private void addClicked() {
-        //TODO: logic around next number.
-        if (isButtonPressed.equals(true)) {
-            System.out.println("Must hit = or change second number value");
-        } else {
-            numberField.setText(numberField.getText().concat(" + "));
-            isButtonPressed = true;
+        if (numberField.getText().length() > 0) {
+            numberField.setText(numberField.getText().concat("+"));
         }
     }
 
     @FXML
     private void subtractClicked() {
-        //TODO: logic around next number.
-        if (isButtonPressed.equals(true)) {
-            System.out.println("Must hit = or change second number value");
-        }else {
-            numberField.setText(numberField.getText().concat(" - "));
-            isButtonPressed = true;
-        }
+        numberField.setText(numberField.getText().concat("-"));
     }
 
     @FXML
@@ -115,22 +106,12 @@ public class calculatorController{
 
     @FXML
     private void equalClicked() {
-        //TODO: Perform math to add two binary numbers and populate the result area.
-        numberField.getText();
-        //break string into 3 parts
-        String[] split = numberField.getText().split("\\s+");
-        //get each number and symbol
-        int number1 = String[0];
-        String symbol = String[1];
-        int number2 = String[2];
-
-        //add more if statements for each symbol
-        if (symbol == "+"){
-            answer = number1 + number2;
-        } if else (symbol == "-"){
-            answer = number1 - number2;
+        try{
+            String[] input = ConverterInterface.parseInput(numberField.getText());
+            calculatedAnswer.setText(CalculatorInterface.eval(input));
+        } catch (Exception e) {
+            System.out.println("Make sure your equation is logically sound.");
+            e.printStackTrace();
         }
-        //return result
-        //clear variables
     }
 }
