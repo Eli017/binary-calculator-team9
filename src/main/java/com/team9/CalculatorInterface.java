@@ -3,8 +3,7 @@ package com.team9;
 public interface CalculatorInterface {
 
     static int add(int number, int secondNumber) {
-        int result = number + secondNumber;
-        return result;
+        return number + secondNumber;
     }
 
     //TODO convert subtract to input and output the same type as add function.

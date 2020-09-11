@@ -26,6 +26,7 @@ public class CalculatorController {
 
     @FXML
     private void enterZero() {
+        //TODO make sure you cant type a 0 after doing the first operation button
         if (numberField.getText().equals("0")) {
             System.out.println("It is already equal to 0.");
         } else {
@@ -61,7 +62,7 @@ public class CalculatorController {
         if (isButtonPressed.equals(true)) {
             System.out.println("Must hit = or change second number value");
         }else {
-            numberField.setText(numberField.getText().concat(" * "));
+            numberField.setText(numberField.getText().concat("*"));
             isButtonPressed = true;
         }
     }
@@ -72,7 +73,7 @@ public class CalculatorController {
         if (isButtonPressed.equals(true)) {
             System.out.println("Must hit = or change second number value");
         }else {
-            numberField.setText(numberField.getText().concat(" / "));
+            numberField.setText(numberField.getText().concat("/"));
             isButtonPressed = true;
         }
     }
@@ -83,6 +84,8 @@ public class CalculatorController {
         if (isButtonPressed.equals(true)) {
             System.out.println("Must hit = or change second number value");
         }else {
+            //May need to be changed
+            numberField.setText(numberField.getText().concat("^10"));
             isButtonPressed = true;
         }
     }

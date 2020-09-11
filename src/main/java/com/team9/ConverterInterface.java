@@ -11,7 +11,8 @@ public interface ConverterInterface {
     }
 
     static String[] parseInput(String input) {
-        String[] inputParts = input.split("\\+|-|/|\\*");
+        //May need to change regex ^10 part
+        String[] inputParts = input.split("\\+|-|/|\\*|^10");
         char operator = input.charAt(inputParts[0].length());
         String[] result = new String[3];
         result[0] = inputParts[0];
