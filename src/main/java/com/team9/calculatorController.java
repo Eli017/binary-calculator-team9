@@ -1,8 +1,10 @@
 package com.team9;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 
-public class CalculatorController {
+
+public class calculatorController{
 
     @FXML
     private void toggleBinaryArabic() {
@@ -15,12 +17,22 @@ public class CalculatorController {
     }
 
     @FXML
+    public void currentNumber() {
+        TextField NumberField;
+    }
+    //Need help unsuccessful changes
+    @FXML
+    public TextField numberField;
+
+    @FXML
     private void enterZero() {
+            String numberField = "0";
         //TODO: append string with 0.
     }
 
     @FXML
     private void enterOne() {
+        String numberField = "1";
         //TODO: append string with 1.
     }
 
@@ -62,5 +74,6 @@ public class CalculatorController {
     @FXML
     private void clearClicked() {
         //TODO: Clear variables and TextField area input.
+
     }
 }
