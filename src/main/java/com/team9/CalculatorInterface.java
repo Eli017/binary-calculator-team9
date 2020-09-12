@@ -6,20 +6,14 @@ public interface CalculatorInterface {
         return number + secondNumber;
     }
 
-    //TODO convert subtract to input and output the same type as add function.
-    //This means that each function will convert from string to int.
     static int subtract(int number, int secondNumber) {
         return number - secondNumber;
     }
 
-    //TODO convert multiply to input and output the same type as add function.
-    //This means that each function will convert from string to int.
     static int multiply(int number, int secondNumber) {
         return number * secondNumber;
     }
 
-    //TODO convert divide to input and output the same type as add function.
-    //This means that each function will convert from string to int.
     static int divide(int number, int secondNumber) {
         if (secondNumber == 0) {
             return 0; //can't divide by zero
@@ -28,8 +22,6 @@ public interface CalculatorInterface {
         }
     }
 
-    //TODO convert sqrt to input and output the same type as add function.
-    //This means that each function will convert from string to int.
     static int squareRoot(int number){
         if (number < 0){
             return 0; //can't square root negative numbers
@@ -38,8 +30,6 @@ public interface CalculatorInterface {
         }
     }
 
-    //TODO convert square to input and output the same type as add function.
-    //This means that each function will convert from string to int.
     static int square(int number){
         return (int) Math.pow(number, 2);
     }
