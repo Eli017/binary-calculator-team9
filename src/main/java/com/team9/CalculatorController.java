@@ -112,9 +112,9 @@ public class CalculatorController {
     @FXML
     private void clearClicked() {
         numberField.setText("0");
-        //TODO: Clear variables and TextField area input.
         isButtonPressed = false;
         isBinary = true;
+        calculatedAnswer.setText("0");
     }
 
     @FXML
