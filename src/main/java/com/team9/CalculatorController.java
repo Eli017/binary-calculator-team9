@@ -93,10 +93,12 @@ public class CalculatorController {
     @FXML
     private void sqrtClicked() {
         //TODO: Perform sqrt math for current number and populate result area.
-        if (isButtonPressed.equals(true)) {
-            System.out.println("Must hit = or change second number value");
-        }else {
-            isButtonPressed = true;
+        try {
+            String answer = Integer.toString(CalculatorInterface.squareRoot(ConverterInterface.binaryToDecimal(numberField.getText())));
+            calculatedAnswer.setText(answer);
+        }catch (Exception e) {
+            System.out.println("Make sure everything is logically sound");
+            e.printStackTrace();
         }
     }
 
