@@ -4,11 +4,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-import java.io.IOException;
-
 public class CalculatorController {
     Boolean isButtonPressed = false;
     Boolean isBinary = false;
+
+    String tempArabicAnswer = "";
 
     @FXML
     TextField numberField;
@@ -20,8 +20,12 @@ public class CalculatorController {
     private void toggleBinaryArabic() {
         try {
             if (isBinary){
-            String decimal = Integer.toString(ConverterInterface.binaryToDecimal(calculatedAnswer.getText()));
-            calculatedAnswer.setText(decimal);
+            if (!tempArabicAnswer.equals("")) {
+                calculatedAnswer.setText(tempArabicAnswer);
+            } else {
+                String decimal = Integer.toString(ConverterInterface.binaryToDecimal(calculatedAnswer.getText()));
+                calculatedAnswer.setText(decimal);
+            }
             isBinary = false;
         } else{
             String binary = ConverterInterface.decimalToBinary(Integer.parseInt(calculatedAnswer.getText()));
@@ -91,6 +95,7 @@ public class CalculatorController {
     private void squareClicked() {
         try{
             String answer = Integer.toString(CalculatorInterface.square(ConverterInterface.binaryToDecimal(numberField.getText())));
+            tempArabicAnswer = answer;
             calculatedAnswer.setText(answer);
         }catch (Exception e){
             System.out.println("Make sure everything is logically sound");
@@ -102,6 +107,7 @@ public class CalculatorController {
     private void sqrtClicked() {
         try {
             String answer = Integer.toString(CalculatorInterface.squareRoot(ConverterInterface.binaryToDecimal(numberField.getText())));
+            tempArabicAnswer = answer;
             calculatedAnswer.setText(answer);
         }catch (Exception e) {
             System.out.println("Make sure everything is logically sound");
@@ -112,6 +118,7 @@ public class CalculatorController {
     @FXML
     private void clearClicked() {
         numberField.setText("0");
+        tempArabicAnswer = null;
         isButtonPressed = false;
         isBinary = false;
         calculatedAnswer.setText("0");
@@ -121,6 +128,7 @@ public class CalculatorController {
     private void equalClicked() {
         try{
             String[] input = ConverterInterface.parseInput(numberField.getText());
+            tempArabicAnswer = Integer.toString(CalculatorInterface.eval(input));
             calculatedAnswer.setText(Integer.toString(CalculatorInterface.eval(input)));
         } catch (Exception e) {
             System.out.println("Make sure your equation is logically sound.");
