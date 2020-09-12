@@ -4,9 +4,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
 public class CalculatorController {
     Boolean isButtonPressed = false;
-    boolean isBinary = true;
+    boolean isBinary = false;
 
     @FXML
     TextField numberField;
@@ -16,16 +18,19 @@ public class CalculatorController {
 
     @FXML
     private void toggleBinaryArabic() {
-        if (isBinary){
-            String decimal = Integer.toString(ConverterInterface.binaryToDecimal(numberField.getText()));
-            numberField.setText(decimal);
+        try {
+            if (isBinary){
+            String decimal = Integer.toString(ConverterInterface.binaryToDecimal(calculatedAnswer.getText()));
+            calculatedAnswer.setText(decimal);
             isBinary = false;
-        } else {
-            String binary = ConverterInterface.decimalToBinary(Integer.parseInt(numberField.getText()));
-            numberField.setText(binary);
+        } else{
+            String binary = ConverterInterface.decimalToBinary(Integer.parseInt(calculatedAnswer.getText()));
+            calculatedAnswer.setText(binary);
             isBinary = true;
         }
-
+    }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @FXML
