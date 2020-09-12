@@ -6,6 +6,7 @@ import javafx.scene.control.TextField;
 
 public class CalculatorController {
     Boolean isButtonPressed = false;
+    boolean isBinary = true;
 
     @FXML
     TextField numberField;
@@ -15,14 +16,17 @@ public class CalculatorController {
 
     @FXML
     private void toggleBinaryArabic() {
-        //TODO: implement toggling of result.
-    }
+        if (isBinary){
+            String decimal = Integer.toString(ConverterInterface.binaryToDecimal(numberField.getText()));
+            numberField.setText(decimal);
+            isBinary = false;
+        } else {
+            String binary = ConverterInterface.decimalToBinary(Integer.parseInt(numberField.getText()));
+            numberField.setText(binary);
+            isBinary = true;
+        }
 
-    @FXML
-    private void toArabic() {
-        //TODO: implement Calculator interface to convert string input to logical number.
     }
-
 
     @FXML
     private void enterZero() {
@@ -80,19 +84,17 @@ public class CalculatorController {
 
     @FXML
     private void squareClicked() {
-        //TODO: logic around next number.
-        if (isButtonPressed.equals(true)) {
-            System.out.println("Must hit = or change second number value");
-        }else {
-            //May need to be changed
-            numberField.setText(numberField.getText().concat("^10"));
-            isButtonPressed = true;
+        try{
+            String answer = Integer.toString(CalculatorInterface.square(ConverterInterface.binaryToDecimal(numberField.getText())));
+            calculatedAnswer.setText(answer);
+        }catch (Exception e){
+            System.out.println("Make sure everything is logically sound");
+            e.printStackTrace();
         }
     }
 
     @FXML
     private void sqrtClicked() {
-        //TODO: Perform sqrt math for current number and populate result area.
         try {
             String answer = Integer.toString(CalculatorInterface.squareRoot(ConverterInterface.binaryToDecimal(numberField.getText())));
             calculatedAnswer.setText(answer);
@@ -107,6 +109,7 @@ public class CalculatorController {
         numberField.setText("0");
         //TODO: Clear variables and TextField area input.
         isButtonPressed = false;
+        isBinary = true;
     }
 
     @FXML
