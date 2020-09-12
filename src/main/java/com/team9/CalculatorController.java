@@ -39,7 +39,6 @@ public class CalculatorController {
 
     @FXML
     private void enterZero() {
-        //TODO make sure you cant type a 0 after doing the first operation button
         if (numberField.getText().equals("0")) {
             System.out.println("It is already equal to 0.");
         } else {
@@ -82,7 +81,6 @@ public class CalculatorController {
 
     @FXML
     private void divideClicked() {
-        //TODO: logic around next number.
         if (isButtonPressed.equals(true)) {
             System.out.println("Must hit = or change second number value");
         }else {
