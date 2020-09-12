@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class CalculatorController {
     Boolean isButtonPressed = false;
-    boolean isBinary = false;
+    Boolean isBinary = false;
 
     @FXML
     TextField numberField;
@@ -113,7 +113,7 @@ public class CalculatorController {
     private void clearClicked() {
         numberField.setText("0");
         isButtonPressed = false;
-        isBinary = true;
+        isBinary = false;
         calculatedAnswer.setText("0");
     }
 
