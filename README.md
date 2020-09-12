@@ -59,13 +59,10 @@ calculator will only display integer outputs, rounded down.  Example:  Peforming
 
 **Square Root Button:**  This button is used to perform the square root operation in conjunction with other valid inputs and interim outputs.
 
-![picture](src/main/resources/com/team9/Readme Pictures/convertToArabic.JPG)
+![picture](src/main/resources/com/team9/Readme Pictures/toggle.JPG)
 
-**Convert to Arabic Button:**  Pushing this button will convert the current readout to Arabic numeral format.
+**Toggle Binary/Arabic Button:**  Pushing this button will convert the current readout between binary number format and Arabic numeral format.
 
-![picture](src/main/resources/com/team9/Readme Pictures/convertToBinary.JPG)
-
-**Convert to Binary Button:**  Pushing this button will convert the current readout to binary number format.
 
 ![picture](src/main/resources/com/team9/Readme Pictures/clear.JPG)
 
