@@ -12,6 +12,10 @@ Requirements
 - [Install Java JDK 14](https://www.oracle.com/java/technologies/javase-jdk14-downloads.html)
 - [Install Intellij](https://www.jetbrains.com/idea/)
 
+## Dependencies
+- JavaFX 14
+- Java SDK 13.x or higher.
+
 # Starting the Application
 1. Verify that you have Intellij Idea installed and updated.
 2. Make sure your Intellij is using the above-listed JDK.  You can change this in the "Program Structure" menu if need be.
@@ -86,9 +90,13 @@ calculator will only display integer outputs, rounded down.  Example:  Peforming
 
 # Meeting Details
 - Conversed frequently via Slack.
-- Had one formal meeting 9/10/2020 @7:00 PM Eastern Standard Time.
+- Had formal meeting 9/10/2020 @7:00 PM Eastern Standard Time.
   - All members were in attendance.
   - Discussed updated gitFlow requirements.
   - Assigned final tasking to complete the project in a timely fashion.
   - Discussed availability of all team members on the final day prior to submission.
+- Had formal meeting 9/11/2020 @11:00 PM Eastern Standard Time.
+  -All members were in attendance.
+  -Discussed final submission.
+  -Fixed a few major bugs. 
   
