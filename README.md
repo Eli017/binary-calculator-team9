@@ -77,15 +77,15 @@ calculator will only display integer outputs, rounded down.  Example:  Peforming
 **Standard Window Function Buttons:**  These buttons are the typical window control buttons seen on most applications; the "-" minimizes the app, the square maximizes, and the "X" closes the GUI.
 
 # Task Allocation
-**Zachary Criswell:**  Handled linking of model-view-controller by providing methods within the controller class.
+**Zachary Criswell:**  Handled linking of model-view-controller by providing methods within the controller class.  Adjusted model and controller code for bugfixes.
 
-**Michael Keen:**  Handled method construction for division, multiplication, subtraction, and binary/decimal conversion.
+**Michael Keen:**  Handled method construction for division, multiplication, subtraction, and binary/decimal conversion.  Adjusted model and controller code for bugfixes.
 
-**Joshua Kennedy:**  Initialized view (programmatic), handled gitFlow questions, and handled final README.md
+**Joshua Kennedy:**  Initialized view (programmatic), handled gitFlow questions, and handled final README.md.  Adjusted model and controller code for bugfixes.
 
 **Duan Rollins:**  Handled linking of model-view-controller by providing methods within the controller class.
 
-**Eli Sokeland:**  Translated view to FXML, initialized gitFlow setup, initialized gitHub repository, and configured initial MVC.
+**Eli Sokeland:**  Translated view to FXML, initialized gitFlow setup, initialized gitHub repository, and configured initial MVC.  Adjusted model and controller code for bugfixes.
 
 
 # Meeting Details
@@ -95,8 +95,8 @@ calculator will only display integer outputs, rounded down.  Example:  Peforming
   - Discussed updated gitFlow requirements.
   - Assigned final tasking to complete the project in a timely fashion.
   - Discussed availability of all team members on the final day prior to submission.
-- Had formal meeting 9/11/2020 @11:00 PM Eastern Standard Time.
-  -All members were in attendance.
+- Had informal meeting 9/11/2020 @11:00 PM Eastern Standard Time.
+  -4/5 members were in attendance.
   -Discussed final submission.
   -Fixed a few major bugs. 
   
